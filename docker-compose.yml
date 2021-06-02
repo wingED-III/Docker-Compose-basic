@@ -1,16 +1,10 @@
 version: '3'
 services:
-  web:
-    build: .
-    ports:
-      - "8080:8080"
-  db:
-    image: "mysql"
-    environment: 
-      MYSQL_ROOT_PASSWORD: password
-    volumes:
-      - db-data:/foo
-
-volumes:
-  db-data:
-
+    web: 
+        build: .
+        ports: 
+          - 8080:8787
+        environment: 
+          PORT: 8787
+          cowsay_msg: Hi man
+    
